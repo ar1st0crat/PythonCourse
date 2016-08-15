@@ -1,2 +1,5 @@
 # checkpoints
 .ipynb_checkpoints/
+
+# py_cache
+.pyc
