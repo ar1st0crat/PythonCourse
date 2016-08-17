@@ -1,4 +1,12 @@
-# -*- coding: utf8 -*-
+'''
+Search
+
+The module provides a standard set of fast search algorithms
+in sorted arrays:
+    - Binary Search
+    - Interpolation Search
+    - Exponential Search
+'''
 
 def binary_search(a, elem):
     ''' Binary Search iterative implementation.
@@ -7,9 +15,10 @@ def binary_search(a, elem):
     ----------
     a : array of items
     elem : item to find
+
     Returns
     ---------- 
-    position or -1
+    position of the element or -1, if the element was not found
     '''
     l = 0
     r = len(a) - 1
@@ -33,7 +42,17 @@ def interpolation_search(a, elem):
     The worst case complexity of interpolation search is O(N), 
     e.g., searching for 1000 in 1,2,...,999,1000,10^9 will take 1000 accesses.
     However, its average case complexity, under the assumption that the keys 
-    are uniformly distributed, is O(log log N) '''
+    are uniformly distributed, is O(log log N).
+
+    Parameters
+    ----------
+    a : array of items
+    elem : item to find
+
+    Returns
+    ---------- 
+    position of the element or -1, if the element was not found
+    '''
     l = 0
     r = len(a) - 1
 
@@ -54,7 +73,17 @@ def interpolation_search(a, elem):
 
 
 def exponential_search(a, elem):
-    ''' Exponential Search implementation '''
+    ''' Exponential Search implementation.
+
+    Parameters
+    ----------
+    a : array of items
+    elem : item to find
+
+    Returns
+    ---------- 
+    position of the element or -1, if the element was not found
+    '''
     l = 1;
     r = len(a) - 1
 
