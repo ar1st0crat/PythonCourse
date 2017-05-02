@@ -3,29 +3,28 @@ class Label(object):
     (может быть любым изображением) """
     def __init__(self, *size):
         if len(size) > 1:
-            self.__width = size[0]
-            self.__height = size[1]
+            self._width = size[0]
+            self._height = size[1]
         else:
-            self.__width = 0
-            self.__height = 0
+            self._width = 0
+            self._height = 0
 
     def load(self, filename):
-        self.__filename = filename
-        # self.__width = Image.get_width(filename)    как-то так
-        # self.__width = Image.get_height(filename)
+        self._filename = filename
+        # self._width = Image.get_width(filename)    как-то так
+        # self._width = Image.get_height(filename)
 
     def scan(self):
         pass
 
     def scale(self, width, height):
-        #print('The {} was scaled at {} x {}'.format(self, width, height))
         print('The {} was scaled at {} x {}'.format(
                 self.__class__.__name__, width, height))
 
     # еще пример синтаксиса Property
     @property
     def filename(self):
-        return self.__filename
+        return self._filename
 
     @filename.setter
     def filename(self, filename):

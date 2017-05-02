@@ -4,6 +4,7 @@ class VerySimpleFraction(object):
     def __init__(self, n, d):
         # data attribute
         # по соглашению о наименовании - private
+        # (впрочем, в других классах будут имена protected - в стиле '_num')
         self.__num = n
         self.__den = d
         self.reduce()

@@ -23,29 +23,29 @@ class Parser:
 
 class XMLParser(Parser):
     def load(self, filename):
-        self.__filename = filename
+        self._filename = filename
 
     def parse(self):
-        print('Parsing XML: ' + self.__filename)
+        print('Parsing XML: ' + self._filename)
 
 
 class JSONParser(Parser):
     def load(self, filename):
-        self.__filename = filename
+        self._filename = filename
 
     def parse(self):
-        print('Parsing JSON: ' + self.__filename)
+        print('Parsing JSON: ' + self._filename)
 
 
 class StringParser:
     def __init__(self, s):
-        self.__string = s
+        self._string = s
 
     def load(self, s):
-        self.__string = s
+        self._string = s
 
     def parse(self):
-        print('foo... ' + self.__string)
+        print('foo... ' + self._string)
 
 
 class ParserFactory:
