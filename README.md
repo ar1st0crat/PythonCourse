@@ -1,12 +1,12 @@
 # Материалы курса "Скриптовое программирование на языке Python"
 
 * [Лекция 1 - Введение](https://github.com/ar1st0crat/PythonCourse/blob/master/lecture%20notebooks/lec01%20-%20Intro.ipynb)
-    - Anaconda, IDEs, Python 2 vs. 3
+    - Anaconda, IDEs
     - PVM
     - Особенности управления памятью в CPython
     - Основные синтаксические элементы языка
     - Case-study (количество нулей в конце 100!)
-    - PEP8
+    - PEP8, autopep
 
 * [Лекция 2 - Типы данных](https://github.com/ar1st0crat/PythonCourse/blob/master/lecture%20notebooks/lec02%20-%20Data%20Types.ipynb)
     - Списки, кортежи, строки, словари, множества
@@ -32,6 +32,7 @@
     - Модули os, shutil
     - Модули glob, pathlib
     - Сериализация: pickle, JSON
+    - Работа с XML
     - ZIP-архивация, модуль zipfile
 
 * [Лекция 6 - Работа с процессами и операционной системой](https://github.com/ar1st0crat/PythonCourse/blob/master/lecture%20notebooks/lec06%20-%20Processes.ipynb)
@@ -76,18 +77,20 @@
     - Асинхронность в Python
     - Модуль asyncio
 
-* Лекция 12 - Работа с сетью
-    - сокеты
+* [Лекция 12 - Работа с сетью](https://github.com/ar1st0crat/PythonCourse/blob/master/lecture%20notebooks/lec12%20-%20Networking.ipynb)
+    - TCP/IP, сокеты
     - CGI
-    - Модуль requests
-    - Модуль BeautifulSoup
+    - Модули requests и BeautifulSoup
+    - aiohttp
+    - websockets
+    - flask
     - scrapy
 
-* Лекция 13 - Визуализация данных
+* [Лекция 13 - Визуализация данных](https://github.com/ar1st0crat/PythonCourse/blob/master/lecture%20notebooks/lec13%20-%20Visualization.ipynb)
     - Библиотека matplotlib
     - Еще визуализации: seaborn, bokeh, NetworkX
 
-* Лекция 14 - Научно-исследовательские библиотеки
+* [Лекция 14 - Научно-исследовательские библиотеки](https://github.com/ar1st0crat/PythonCourse/blob/master/lecture%20notebooks/lec14%20-%20Science.ipynb)
     - Библиотека numpy
     - Библиотека scipy
     - Библиотека sympy
