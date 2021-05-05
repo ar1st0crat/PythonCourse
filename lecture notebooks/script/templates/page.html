@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+    {% if cars %}
+        <ul>
+        {% for car in cars %}
+            <li>{{ car.model }} {{ car.no }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cars are available.</p>
+    {% endif %}
+</body>
+</html>
