@@ -1,0 +1,65 @@
+.course-card {
+  display: inline-block;
+  height: 300px;
+  width: 230px;
+  margin: 15px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  color: black;
+  background-color: white;
+  text-align: left;
+  padding: 0;
+}
+
+.course-card mat-card-subtitle {
+  color: black;
+}
+
+#credits {
+  margin-top: 10px;
+  height: 30px;
+}
+
+#description {
+  margin: 0;
+  padding-left: 15px;
+  padding-top: 5px;
+  width: 200px;
+  height: 62px;
+  background-color: #f9f4f9;
+  border-top: #f1eaf1 1px solid;
+  border-bottom: #f1eaf1 1px solid;
+}
+
+.course-card mat-card-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0.8em;
+  font-weight: 200;
+  width: 190px;
+  word-wrap: break-word;
+}
+
+.course-card mat-card-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 70px;
+  background-color: #dfd8d8;
+}
+
+.course-card mat-card-actions {
+  margin-top: 0;
+  margin-left: 15px;
+  padding-top: 0;
+  height: 30px;
+}
+
+mat-card-actions button {
+  min-width: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+#editpanel {
+  float: right;
+  margin-right: 15px;
+}

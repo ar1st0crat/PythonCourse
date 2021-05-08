@@ -1,0 +1,30 @@
+<mat-card class="course-card">
+  <mat-card-header>
+    <mat-card-title> {{ course.name }} </mat-card-title>
+  </mat-card-header>
+  <mat-card-content id="credits">
+    <mat-card-subtitle>Кредитов: {{course.ects}}</mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-card-subtitle>Преподаватель: {{course.teacher.name}}</mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-content id="description">
+    {{ course.description }}
+  </mat-card-content>
+  <mat-card-actions>
+    <a [routerLink]="['/courses', course.id]">
+      <button mat-button>
+        <mat-icon [inline]="true">list</mat-icon>
+        ТЕМЫ
+      </button>
+    </a>
+    <div id="editpanel">
+      <button mat-button (click)="edit()">
+        <mat-icon [inline]="true">edit</mat-icon>
+      </button>
+      <button mat-button (click)="delete()">
+        <mat-icon [inline]="true">delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

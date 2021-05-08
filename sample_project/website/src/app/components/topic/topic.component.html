@@ -1,0 +1,55 @@
+<mat-accordion multi>
+  <mat-expansion-panel class="topic-panel">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        <div>
+          <div style="display: block;">
+            {{topic.no}}. {{topic.name}}
+          </div>
+          <div class="desc" style="display: block;">{{ topic.description }}</div>
+        </div>
+      </mat-panel-title>
+      <div id="docs">
+        <span *ngFor="let s of topic.synopses">
+            <img *ngIf="s.url.endsWith('pptx')"
+                 src="../../../assets/pptx.png"
+                 width="32" height="32"
+                 (click)="download($event, s.url)" />
+            <img *ngIf="s.url.endsWith('pdf')"
+                 src="../../../assets/pdf-icon.png"
+                 width="32" height="32"
+                 (click)="download($event, s.url)" />
+        </span>
+      </div>
+    </mat-expansion-panel-header>
+
+    <div class="edit">
+      <mat-form-field style="display: block;">
+        <mat-label class="name-input">Название</mat-label>
+        <input matInput required [(ngModel)]="topic.name">
+      </mat-form-field>
+
+      <mat-form-field style="display: block;">
+        <mat-label class="desc-input">Описание</mat-label>
+        <textarea matInput [(ngModel)]="topic.description"></textarea>
+      </mat-form-field>
+    </div>
+
+    <mat-expansion-panel *ngFor="let s of topic.synopses" style="margin-bottom: 15px;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          ПОКАЗАТЬ ТЕКСТ (ДОБАВЛЕН {{ s.createdAt | date: 'medium' }})
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div style="white-space: pre-line">{{ s.text }}</div>
+
+    </mat-expansion-panel>
+
+    <button mat-raised-button (click)="save()"> СОХРАНИТЬ </button>
+    <button mat-raised-button (click)="delete()"> УДАЛИТЬ </button>
+    <button mat-raised-button (click)="addPdf(topic.id)"> + PDF </button>
+    <button mat-raised-button (click)="addPptx(topic.id)"> + PPTX </button>
+
+  </mat-expansion-panel>
+</mat-accordion>

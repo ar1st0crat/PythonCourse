@@ -1,0 +1,28 @@
+<div mat-dialog-content id="main">
+  <p>Название:</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <p>Описание:</p>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="data.description"></textarea>
+  </mat-form-field>
+  <p>Количество кредитов:</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.ects">
+  </mat-form-field>
+  <p>Преподаватель:</p>
+  <mat-form-field>
+    <mat-select [(ngModel)]="data.teacher.id">
+      <mat-option *ngFor="let teacher of teachers" [value]="teacher.id">
+        {{teacher.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div mat-dialog-actions id="buttons">
+    <button mat-button (click)="onCancel()"> ОТМЕНА </button>
+    <button mat-button (click)="onSave()" cdkFocusInitial> ОК </button>
+  </div>
+
+</div>

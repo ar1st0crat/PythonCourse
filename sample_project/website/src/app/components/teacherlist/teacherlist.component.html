@@ -1,0 +1,19 @@
+<div>
+  <table mat-table [dataSource]="teachers" align="center">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> ФИО </th>
+      <td mat-cell *matCellDef="let teacher"> {{teacher.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> e-mail </th>
+      <td mat-cell *matCellDef="let teacher"> {{teacher.email}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" style="width: 40%;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" style="width: 40%;"></tr>
+  </table>
+
+  <button mat-raised-button (click)="add()"> + ДОБАВИТЬ </button>
+</div>

@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+  <p>ФИО:</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <p>E-mail:</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()"> ОТМЕНА </button>
+  <button mat-button (click)="onSave()" cdkFocusInitial> ОК </button>
+</div>

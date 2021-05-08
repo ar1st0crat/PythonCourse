@@ -1,0 +1,31 @@
+<div align="center">
+  <h1 *ngIf="isPdf">ЗАГРУЗИТЕ PDF-ФАЙЛ</h1>
+  <h1 *ngIf="!isPdf">ЗАГРУЗИТЕ PPTX-ФАЙЛ</h1>
+
+  <div>
+    <div *ngIf="error">
+      {{ error }}
+    </div>
+    <div *ngIf="uploadResponse.status === 'error'">
+      {{ uploadResponse.message }}
+    </div>
+    <div *ngIf="uploadResponse.status === 'progress'">
+
+      <div role="progressbar" [style.width.%]="uploadResponse.message" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        {{ uploadResponse.message }}%
+      </div>
+
+    </div>
+
+    <div style="white-space: pre-line">
+      {{ uploadResponse.message }}
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <input type="file" name="synopsis" (change)="onFileChange($event)" />
+      <button type="submit">Загрузить</button>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div align="center">
+  <app-course *ngFor="let item of courses"
+              [course]="item"
+              (updateCourselistEvent)="updateCourses()">
+  </app-course>
+</div>
+
+<div align="center">
+  <button mat-raised-button (click)="add()"> + ДОБАВИТЬ </button>
+</div>

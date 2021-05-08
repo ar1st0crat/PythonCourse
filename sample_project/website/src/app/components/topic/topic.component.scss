@@ -1,0 +1,48 @@
+.topic-panel {
+  background-color: white;
+  margin: 15px;
+}
+
+.title {
+  color:black;
+  font-weight: bold;
+}
+
+.name-input {
+  color:black;
+}
+
+.desc-input {
+  color:black;
+}
+
+.desc {
+  font-size: 0.9em;
+  font-weight: 200;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.edit {
+  color:black;
+}
+
+#docs {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+textarea {
+  height: 80px;
+}
+
+::ng-deep .mat-expansion-indicator {
+  margin-left: 10px;
+  margin-right: -8px;
+}
+
+::ng-deep .mat-expansion-indicator::after, .mat-expansion-panel-header-description {
+  color: rgba(200, 200, 200, 0.7);
+}

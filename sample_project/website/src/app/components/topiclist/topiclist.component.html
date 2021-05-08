@@ -1,0 +1,11 @@
+<h3 align="center">Темы курса "{{courseName}}"</h3>
+
+<app-topic multi
+           *ngFor="let topic of topics"
+           [topic]="topic"
+           (removeEvent)="remove(topic.id)">
+</app-topic>
+
+<div align="center">
+  <button mat-raised-button (click)="add()"> + ДОБАВИТЬ </button>
+</div>
