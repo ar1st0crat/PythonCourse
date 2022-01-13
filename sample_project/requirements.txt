@@ -19,7 +19,7 @@ MarkupSafe==1.1.1
 marshmallow==3.10.0
 pdfminer.six==20200517
 pdfplumber==0.5.27
-Pillow==8.1.2
+Pillow==9.0.0
 pycryptodome==3.10.1
 pyrsistent==0.17.3
 python-dateutil==2.8.1
